@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Smart Reply</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <script src="res/js/jquery/jquery-3.3.1.min.js"></script> 
+
+    <style>
+    @font-face {
+        font-family: 'Google Sans';
+        src: url('/res/fonts/GoogleSans-Regular.ttf');
+    }
+
+    .bra {
+        align-items: center;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        outline: none;
+        position: relative;
+        z-index: 0;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+        font-size: .875rem;
+        letter-spacing: .25px;
+        font-variant-ligatures: no-contextual;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        border-radius: 8px;
+        box-shadow: inset 0 0 0 1px #dadce0;
+        box-sizing: border-box;
+        color: #1a73e8;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 20px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }
+
+    .bra:hover {
+        background-color: rgba(32,33,36,0.039);
+    }
+
+    #container {
+        margin: 0 auto 0 auto;
+        width: 800px;
+    }
+
+    #gbuttons {
+        margin: 2em 0 4em 0;
+    }
+
+    article {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        font-size: 17pt;
+        line-height: 24pt;
+        letter-spacing: 1pt;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <script>
+        var replies = [
+            "Thanks, I'll take a look.",
+            "I'm working on it.",
+            "Got it, thanks!",
+            "I think it's perfect!",
+            "Good for you!",
+            "No problem, thanks!",
+            "I don't know.",
+            "Get well soon.",
+            "Oh no! hope you feel better soon.",
+            "Sounds good, thanks for the heads up.",
+            "Yes, I'll be home.",
+            "Nope, that's fine.",
+            "Haha, thanks!",
+            "Love it!",
+            "Thanks a lot.",
+            "Got it, thanks!",
+            "Got them, thanks!",
+            "Received, thank you.",
+            "Looks good to me.",
+            "Here you go.",
+            "Great picture!",
+            "Ok, thanks!",
+            "I don't, sorry.",
+            "I love you.",
+            "Cool, see you there.",
+            "Very interesting!",
+            "That's awesome!",
+            "Sweet!",
+            "Will do.",
+            "Sent from my iPhone",
+            "I accept!",
+            "I accept the offer.",
+            "What!?",
+            "Why?",
+            "Sure!",
+            "No, I can't",
+            "Thanks! I'll check it out.",
+            "Thanks for sharing!",
+            "Yes, I'm fine.",
+            "I'm ok, how are you?",
+            "Thank you for your support!",
+            "Nice to hear from you!",
+            "I don't know yet.",
+            "No plans yet.",
+            "Looking forward to seeing you!",
+            "Sure, sounds fun!",
+            "Sounds good to me!",
+            "Not really.",
+            "Thank you for the information.",
+            "No worries!",
+        ];
+
+        $(document).ready(function() {
+            replies.forEach(function(reply) {
+                console.log(reply);
+                $("#gbuttons").append('<div class="bra" role="button" tabindex="0" aria-label="Suggested reply, '+reply+'" data-action-index="1">'+reply+'</div>');
+            });
+        });
+    </script>
+
+    <div id="gbuttons">
+        <!-- render all buttons here -->
+    </div>
+
+    <article>
+        <h3>About these buttons</h3>
+        <p>The font and style matches that of gmail, what you see here is the official <em>Google Product Font</em>. You can use your browser's render settings to adapt font size to your liking and you cana render this page as PDF to have them in vector format.</p>
+        <p>These are some of the replies that Gmail's system has suggested over the last year. The first thing that struck me about them is how upbeat and affirmative they all are. These of course are only in English language, but in the very few emails that I still exchange in Spanish the suggestions for Gmail's algorithm were also in Spanish. Perhaps there's another work there as well, since it is likely that the algorithm preserves this slightly creepy upbeat tone across languages. Anyway, this is a start. You can render this page as a PDF for vector graphics. I am sure that many German speakers get a "Wunderbar!" button in their suggestions as well.</p>
+    </article>
+    </div>
+</body>
+</html>
